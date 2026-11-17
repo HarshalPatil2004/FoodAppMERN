@@ -1,0 +1,228 @@
+
+.navbars {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background-color: white;
+    position: relative;
+    z-index: 100;
+}
+
+/* Logo */
+
+.logo {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navbar Menu */
+
+.navbars-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbars-menu a,
+.navbars-menu li {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    transition: 0.3s;
+}
+
+.navbars-menu a:hover,
+.navbars-menu li:hover {
+    color: orangered;
+}
+
+.navbars-menu .active {
+    color: orangered;
+    border-bottom: 2px solid orangered;
+    padding-bottom: 5px;
+}
+
+/* Right Side Navbar */
+
+.navbars-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.search {
+    width: 25px;
+    cursor: pointer;
+}
+
+/* Basket Icon */
+
+.navbar-serach-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cart-icon-link .basket {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    cursor: pointer;
+}
+
+/* Cart Count Badge */
+
+.cart-count {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4c24;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    z-index: 10;
+}
+
+/* Sign In Button */
+
+.navbars-right button {
+    padding: 8px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.navbar-profile{
+    position: relative;
+}
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+
+}
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid orangered;
+    outline: 2px solid white;
+    list-style: none;
+}
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+.nav-profile-dropdown img{
+    width: 20px;
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 900px) {
+
+    .navbars {
+        padding: 15px 3%;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .navbars-menu {
+        gap: 15px;
+    }
+
+    .navbars-menu a,
+    .navbars-menu li {
+        font-size: 14px;
+    }
+
+    .navbars-right {
+        gap: 15px;
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    .navbars {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 12px 4%;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    .navbars-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .navbars-menu a,
+    .navbars-menu li {
+        font-size: 13px;
+    }
+
+    .navbars-right {
+        gap: 12px;
+    }
+
+    .search {
+        width: 20px;
+    }
+
+    .cart-icon-link .basket {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbars-right button {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+
+    .cart-count {
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+        top: -7px;
+        right: -7px;
+    }
+}
